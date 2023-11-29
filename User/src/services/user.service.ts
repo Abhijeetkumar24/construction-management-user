@@ -69,11 +69,6 @@ class UserService extends GrpcClass {
             return err;
         }
     }
-    
-    
-    
-
-
 }
 
 export const userService = new UserService();
