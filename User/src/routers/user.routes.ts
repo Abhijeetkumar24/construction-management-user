@@ -14,6 +14,11 @@ class UserRouter {
 
     userRouter() {
 
+        this.router.post(
+            '/express-nest-signup',
+            userController.expressNestSignup
+        );
+
         this.router.get(
             '/get-property/:propertyId',
             userController.getProperty

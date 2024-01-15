@@ -12,11 +12,31 @@ class UserService extends GrpcClass {
 
     constructor( ) { 
         super('property.proto','propertyPackage')
+        // super('auth.proto','auth')                                 // when using movie microservice auth (Nestjs) then uncomment this line for using express nestjs signup api
         this.loadService()
     }
 
     loadService() {
         this.service=new this.package.Property("0.0.0.0:7000",credentials.createInsecure());
+        // this.service=new this.package.AuthService("localhost:50051",credentials.createInsecure());         // when using movie microservice auth (Nestjs) then uncomment this line
+
+    }
+
+
+    async expressNestSignup(name: string, email:string, password:string, role:string[], notification:string): Promise<any> {                // uncomment above two line to use nest auth microservice server 
+        
+        const data = await new Promise((resolve, reject) => {
+            this.service.Signup({ name, email, password, role, notification }, (err, response) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(response);
+                }
+            });
+        });
+
+        return data;
+
     }
 
 
@@ -53,7 +73,6 @@ class UserService extends GrpcClass {
     async allProperty() {
         try {
     
-            console.log("hii 1")
             const data = new Promise((resolve, reject) => {
                 this.service.GetAllProperty({},(err, response) => {
                     if (err) {

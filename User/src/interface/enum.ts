@@ -103,10 +103,12 @@ export enum HttpStatusMessage {
 }
 
 
+
+
 export enum ExceptionMessage {
 
     PROPERTY_DETAILS_ERROR = "Error in Property details fetching ",
-    
+
     // DISTANCE_ERROR = 'Maximum distance reached',
     // INVALID_ADDRESS = "INVALID ADDRESS",
     // NOT_FOUND = "NOT_FOUND",
@@ -116,7 +118,7 @@ export enum ExceptionMessage {
     EMAIL_NOT_EXISTS = "EMAIL_NOT_EXISTS",
     LOGIN_FAILED = "LOGIN_FAILED",
     SOMETHING_WENT_WRONG = "SOMETHING_WENT_WRONG",
-    ADD_PROPERTY_FAIL= "Error in adding the property",
+    ADD_PROPERTY_FAIL = "Error in adding the property",
     PROPERTY_ALREADY_EXIST = "Property already exist",
     TOKEN_NOT_FOUND = "Token not found",
     ACTIVE_CONSTRUCTION_ERROR = "Error in Active construction",
@@ -138,19 +140,7 @@ export enum ExceptionMessage {
     // AUTH_INVALID_STRATEGY = "AUTH_INVALID_STRATEGY",
     // OTP_EXPIRED = "OTP_EXPIRED",
     SESSION_NOT_FOUND = "SESSION_NOT_FOUND",
-    // INVALID_REQUEST = "INVALID_REQUEST",
-    // INCORRECT_OTP = "INCORRECT_OTP",
-    // INVALID_APIKEY = "INVALID_APIKEY",
-    // INVALID_OTP = "INVALID_OTP",
-    // INVALID_PASSWORD = "INVALID_PASSWORD",
-    // UNAUTHORIZED = "UNAUTHORIZED",
-    // MOVED_PERMANENTLY = "MOVED_PERMANENTLY",
-    // USER_BLOCKED = "USER_BLOCKED",
-    // USER_NOT_FOUND = "USER_NOT_FOUND",
-    // TOKENIZATION_ERROR = "TOKENIZATION_ERROR",
-    // LINK_EXPIRE = "Link Expired",
-    // CONNECTION_NOT_FOUND = "CONNECTION_NOT_FOUND",
-    // FILE_ERROR = "FILE_NOT_FOUND",
+    ERROR_IN_REGISTRATION = "ERROR_IN_REGISTRATION"
 }
 
 
